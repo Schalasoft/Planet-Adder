@@ -1,0 +1,7 @@
+C:\Steam Modding\Mods\Oxygen Not Included\PlanetAdder\bin\x64\Debug\config.txt
+C:\Steam Modding\Mods\Oxygen Not Included\PlanetAdder\bin\x64\Debug\Planet Adder.dll
+C:\Steam Modding\Mods\Oxygen Not Included\PlanetAdder\bin\x64\Debug\Planet Adder.pdb
+C:\Steam Modding\Mods\Oxygen Not Included\PlanetAdder\obj\x64\Debug\Planet Adder.csprojAssemblyReference.cache
+C:\Steam Modding\Mods\Oxygen Not Included\PlanetAdder\obj\x64\Debug\Planet Adder.csproj.CoreCompileInputs.cache
+C:\Steam Modding\Mods\Oxygen Not Included\PlanetAdder\obj\x64\Debug\Planet Adder.dll
+C:\Steam Modding\Mods\Oxygen Not Included\PlanetAdder\obj\x64\Debug\Planet Adder.pdb

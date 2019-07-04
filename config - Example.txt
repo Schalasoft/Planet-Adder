@@ -1,0 +1,11 @@
+IceGiant,0,0
+GasGiant,1,1
+Satellite,2,2
+MetallicAsteroid,3,3
+RockyAsteroid,4,4
+CarbonaceousAsteroid,5,5
+DustyDwarf,6,6
+IcyDwarf,7,7
+OrganicDwarf,8,8
+TerraPlanet,9,9
+VolcanoPlanet,10,10

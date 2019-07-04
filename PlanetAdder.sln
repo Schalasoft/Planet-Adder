@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Planet Adder", "Planet Adder.csproj", "{8257D354-8602-43EE-8D31-4086DDE15664}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8257D354-8602-43EE-8D31-4086DDE15664}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8257D354-8602-43EE-8D31-4086DDE15664}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8257D354-8602-43EE-8D31-4086DDE15664}.Debug|x64.ActiveCfg = Debug|x64
+		{8257D354-8602-43EE-8D31-4086DDE15664}.Debug|x64.Build.0 = Debug|x64
+		{8257D354-8602-43EE-8D31-4086DDE15664}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8257D354-8602-43EE-8D31-4086DDE15664}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8257D354-8602-43EE-8D31-4086DDE15664}.Release|x64.ActiveCfg = Release|x64
+		{8257D354-8602-43EE-8D31-4086DDE15664}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9779E553-04D6-41C5-9E18-4B8929212447}
+	EndGlobalSection
+EndGlobal

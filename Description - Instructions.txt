@@ -1,0 +1,24 @@
+This mod allows you to add planets to the starmap. 
+
+I made this mod after researching all my planets and saw I had not a single Gas Giant, which I very much wanted, so I made a mod to make it happen and tweaked so others can use it. I hope you find it useful!
+
+Please ensure to backup your save file before using this as you may place planets so that they overlap with others etc.
+
+Planets are added using the "config.txt" file in the same folder as the installed mod.
+
+On my machine this is in: %USERPROFILE%\Documents\Klei\OxygenNotIncluded\mods\Steam
+
+...and then within the mod folder
+
+The config file comes already set to add one of each type of planet at varying distances and orbits, and works as follows:
+GasGiant,0,0 	  ---> Adds a Gas Giant to the closest range (e.g. 10,0000km) at the far left
+VolcanoPlanet,1,1 ---> Adds a Volcanic Planet to the second closest range, one in from the left
+Satellite,2,2     ---> Adds a Satellite to the third closest range, 2 in from the left
+
+Quick Instructions:
+1) Edit "config.txt" to add the planets you want
+2) Open the starmap on the save file you want to add the planets to (they are added un-researched so you will just see a planet is added, but not know which kind yet)
+3) Save your map if everything went well (no planet overlaps etc.)
+
+Note that the "config.txt" will become renamed to "config.txt.old" on the starmap being opened, so if you want to add more planets rename the file back to "config.txt".
+This is to ensure additional saves are unaffected, and allows control of the planet generation per save by renaming the config file and loading up a save file you want to add planets to.
