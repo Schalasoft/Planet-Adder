@@ -14,6 +14,7 @@ namespace PlanetAdder
     {
         static bool debugEnabled = true;
 
+        // local and steam paths are used for local development
         static string localPath = "C:\\Users\\ciand\\OneDrive\\Documents\\Klei\\OxygenNotIncluded\\mods\\dev\\Planet Adder\\";
         //static string steamPath = "C:\\Users\\ciand\\OneDrive\\Documents\\Klei\\OxygenNotIncluded\\mods\\Steam\\1749025321\\";
         static string path = "";
@@ -63,7 +64,7 @@ namespace PlanetAdder
             return spaceDestinationType;
         }
 
-        // Debug
+        // Local debug for DLL
         public static void Test()
         {
             loadConfig();
@@ -174,8 +175,6 @@ namespace PlanetAdder
 
                     // CDG DEBUG - Auto show the planet
                     //Game.Instance.spacecraftManager.destinationAnalysisScores.Add(uniqueId, 100);
-
-                    uniqueId++; // redundant cdg
                 }
 
                 if (debugEnabled)
