@@ -10,17 +10,17 @@ namespace PlanetAdder
     [HarmonyPatch(typeof(StarmapScreen), "LoadPlanets")]
     public static class LoadsPlanets_Patch
     {
-        private static readonly LoggingFileHandler loggingFileHandler = null;
-        private static readonly ILogger logger = null;
-        private static readonly FileHandler fileHandler = null;
+        private static LoggingFileHandler loggingFileHandler = null;
+        private static ILogger logger = null;
+        private static FileHandler fileHandler = null;
 
         private static void InitializeClasses()
         {
             // Create Logging File Handler
-            LoggingFileHandler loggingFileHandler = FileHandlerFactory.CreateLoggingFileHandler();
+            loggingFileHandler = FileHandlerFactory.CreateLoggingFileHandler();
 
             // Create Logger
-            ILogger logger = null;
+            logger = null;
 
             if (loggingFileHandler.IsLoggingEnabledFlag())
             {
@@ -32,7 +32,7 @@ namespace PlanetAdder
             }
 
             // Create File Handler - should be done before logger is setup to determine if logging is enabled
-            FileHandler fileHandler = FileHandlerFactory.CreateFileHandler(logger);
+            fileHandler = FileHandlerFactory.CreateFileHandler(logger);
         }
 
         // LoadPlanets method prefix
