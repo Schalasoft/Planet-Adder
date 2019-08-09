@@ -1,14 +1,34 @@
 ﻿using Database;
+using PlanetAdder.Logging;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Text;
 
-namespace PlanetAdder
+namespace PlanetAdder.FileHandling
 {
-    public static class FileHandler
+    public class FileHandler
     {
+        private ILogger logger = null;
+        private string path = null;
+
+        public string FilePath
+        {
+            get
+            {
+                return this.path;
+            }
+        }
+
+        public FileHandler(ILogger logger)
+        {
+            this.logger = logger;
+
+            // Initialize file path
+            this.path = GetDLLPath();
+        }
+
         public static string GetDLLPath()
         {
             string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase);
@@ -17,7 +37,7 @@ namespace PlanetAdder
         }
 
         // Converts text names of planets from config file to their respective types using reflection
-        private static SpaceDestinationType convertSpaceDestinationType(SpaceDestinationTypes spaceDestinationTypes, String destinationType)
+        private SpaceDestinationType convertSpaceDestinationType(SpaceDestinationTypes spaceDestinationTypes, string destinationType)
         {
             SpaceDestinationType spaceDestinationType = null;
 
@@ -25,9 +45,9 @@ namespace PlanetAdder
             {
                 spaceDestinationType = (SpaceDestinationType)Activator.CreateInstance(typeof(SpaceDestinationTypes).GetNestedType(destinationType));
             }
-            catch(Exception e)
+            catch(NullReferenceException)
             {
-                Logger.InvalidPlanetName();
+                this.logger.InvalidPlanetName();
                 spaceDestinationType = spaceDestinationTypes.CarbonaceousAsteroid;
             }
 
@@ -35,24 +55,24 @@ namespace PlanetAdder
         }
 
         // Load config file of planets to add, 1 per line (planet type, row, column)
-        public static List<Tuple<SpaceDestinationType, int, int>> LoadConfig(string path)
+        public List<Tuple<SpaceDestinationType, int, int>> LoadConfig()
         {
             // List to hold planets
             List<Tuple<SpaceDestinationType, int, int>> planets = new List<Tuple<SpaceDestinationType, int, int>>();
 
             // Create path to the config file
-            string fileName = Path.Combine(path, "config.txt");
+            string fileName = Path.Combine(this.path, "config.txt");
 
             // Read all the lines
             if (File.Exists(fileName))
             {
                 string[] lines = File.ReadAllLines(fileName, Encoding.UTF8);
-
+                
                 // Get the list of destination types for converting the text names from the config
                 SpaceDestinationTypes spaceDestinationTypes = Db.Get().SpaceDestinationTypes;
 
                 // Copy in each planet to add, 1 per line in format (type, row)
-                foreach (String line in lines)
+                foreach (string line in lines)
                 {
                     // Split around comma
                     string[] parts = line.Split(',');
@@ -69,20 +89,26 @@ namespace PlanetAdder
         }
 
         // Renames config file, this is done once the mod has added planets to a save from this config
-        public static void RenameConfigFile(string path)
+        public void RenameConfigFile()
         {
             // Build file paths
-            string replaceFileName = Path.Combine(path, "config.txt.old");
-            string fileName = Path.Combine(path, "config.txt");
+            string replaceFileName = Path.Combine(this.path, "config.txt.old");
+            string fileName = Path.Combine(this.path, "config.txt");
 
             // If there is already an "config.txt.old" then remove it
-            if (File.Exists(replaceFileName)) File.Delete(replaceFileName);
+            if (File.Exists(replaceFileName))
+            {
+                File.Delete(replaceFileName);
+            }
 
             // Move (copy) config file
             File.Move(fileName, replaceFileName);
 
             // Delete original config file
-            if (File.Exists(fileName)) File.Delete(fileName);
+            if (File.Exists(fileName))
+            {
+                File.Delete(fileName);
+            }
         }
     }
 }

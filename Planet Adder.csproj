@@ -78,8 +78,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileHandler.cs" />
-    <Compile Include="Logger.cs" />
+    <Compile Include="FileHandling\FileHandler.cs" />
+    <Compile Include="FileHandling\FileHandlerFactory.cs" />
+    <Compile Include="FileHandling\LoggingFileHandler.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Logging\FakeLogger.cs" />
+    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Logging\LoggerFactory.cs" />
     <Compile Include="PlanetAdder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

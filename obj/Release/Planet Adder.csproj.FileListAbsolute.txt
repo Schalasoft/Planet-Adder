@@ -7,3 +7,4 @@ C:\Steam Modding\Mods\Oxygen Not Included\PlanetAdder\obj\Release\Planet Adder.p
 C:\Steam Modding\Mods\Oxygen Not Included\PlanetAdder\bin\Release\config.txt
 C:\Steam Modding\Mods\Oxygen Not Included\PlanetAdder\bin\Release\Planet Adder.dll
 C:\Steam Modding\Mods\Oxygen Not Included\PlanetAdder\bin\Release\Planet Adder.pdb
+C:\Steam Modding\Mods\Oxygen Not Included\PlanetAdder\obj\Release\Planet Adder.csprojAssemblyReference.cache
