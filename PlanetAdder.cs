@@ -31,13 +31,15 @@ namespace PlanetAdder
                 logger = LoggerFactory.CreateFakeLogger();
             }
 
-            // Create File Handler - should be done before logger is setup to determine if logging is enabled
+            // Create Planet Config File Handler
             fileHandler = FileHandlerFactory.CreateFileHandler(logger);
         }
 
         // LoadPlanets method prefix
         private static void Prefix()
         {
+            InitializeClasses();
+
             logger.Begin();
 
             // Load the configuration file and get the planets to add

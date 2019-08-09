@@ -36,21 +36,82 @@ namespace PlanetAdder.FileHandling
             return path;
         }
 
-        // Converts text names of planets from config file to their respective types using reflection
-        private SpaceDestinationType convertSpaceDestinationType(SpaceDestinationTypes spaceDestinationTypes, string destinationType)
+        // Converts text names of planets to their types
+        private static SpaceDestinationType convertSpaceDestinationType(SpaceDestinationTypes spaceDestinationTypes, String destinationType)
         {
             SpaceDestinationType spaceDestinationType = null;
-
-            try
-            {
-                spaceDestinationType = (SpaceDestinationType)Activator.CreateInstance(typeof(SpaceDestinationTypes).GetNestedType(destinationType));
+                switch(destinationType)
+                {
+                    case "Satellite":
+                        spaceDestinationType = spaceDestinationTypes.Satellite;
+                        break;
+                    case "MetallicAsteroid":
+                        spaceDestinationType = spaceDestinationTypes.MetallicAsteroid;
+                        break;
+                    case "RockyAsteroid":
+                        spaceDestinationType = spaceDestinationTypes.RockyAsteroid;
+                        break;
+                    case "CarbonaceousAsteroid":
+                        spaceDestinationType = spaceDestinationTypes.CarbonaceousAsteroid;
+                        break;
+                    case "IcyDwarf":
+                        spaceDestinationType = spaceDestinationTypes.IcyDwarf;
+                        break;
+                    case "OrganicDwarf":
+                        spaceDestinationType = spaceDestinationTypes.OrganicDwarf;
+                        break;
+                    case "TerraPlanet":
+                        spaceDestinationType = spaceDestinationTypes.TerraPlanet;
+                        break;
+                    case "VolcanoPlanet":
+                        spaceDestinationType = spaceDestinationTypes.VolcanoPlanet;
+                        break;
+                    case "GasGiant":
+                        spaceDestinationType = spaceDestinationTypes.GasGiant;
+                        break;
+                    case "IceGiant":
+                        spaceDestinationType = spaceDestinationTypes.IceGiant;
+                        break;
+                    case "DustyDwarf":
+                        spaceDestinationType = spaceDestinationTypes.DustyMoon;
+                        break;
+                    case "Wormhole":
+                        spaceDestinationType = spaceDestinationTypes.Wormhole;
+                        break;
+                    case "SaltDwarf":
+                        spaceDestinationType = spaceDestinationTypes.SaltDwarf;
+                        break;
+                    case "RustPlanet":
+                        spaceDestinationType = spaceDestinationTypes.RustPlanet;
+                        break;
+                    case "ForestPlanet":
+                        spaceDestinationType = spaceDestinationTypes.ForestPlanet;
+                        break;
+                    case "RedDwarf":
+                        spaceDestinationType = spaceDestinationTypes.RedDwarf;
+                        break;
+                    case "GoldAsteroid":
+                        spaceDestinationType = spaceDestinationTypes.GoldAsteroid;
+                        break;
+                    case "HydrogenGiant":
+                        spaceDestinationType = spaceDestinationTypes.HydrogenGiant;
+                        break;
+                    case "OilyAsteroid":
+                        spaceDestinationType = spaceDestinationTypes.OilyAsteroid;
+                        break;
+                    case "ShinyPlanet":
+                        spaceDestinationType = spaceDestinationTypes.ShinyPlanet;
+                        break;
+                    case "ChlorinePlanet":
+                        spaceDestinationType = spaceDestinationTypes.ChlorinePlanet;
+                        break;
+                    case "SaltDesertPlanet":
+                        spaceDestinationType = spaceDestinationTypes.SaltDesertPlanet;
+                        break;
+                    case "Earth":
+                        spaceDestinationType = spaceDestinationTypes.Earth;
+                        break;
             }
-            catch(NullReferenceException)
-            {
-                this.logger.InvalidPlanetName();
-                spaceDestinationType = spaceDestinationTypes.CarbonaceousAsteroid;
-            }
-
             return spaceDestinationType;
         }
 

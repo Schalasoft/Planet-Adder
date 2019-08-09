@@ -7,16 +7,15 @@ namespace PlanetAdder.FileHandling
     {
         public bool IsLoggingEnabledFlag()
         {
-            bool IsLoggingEnabled = false;
             string fileName = Path.Combine(FileHandler.GetDLLPath(), "EnableLogging.txt");
 
             try
             {
                 using (TextReader reader = File.OpenText(fileName))
                 {
-                    Boolean.TryParse(reader.ReadLine(), out IsLoggingEnabled);
+                    string line = reader.ReadLine();
 
-                    return IsLoggingEnabled;
+                    return (line == "1");
                 }
             }
             catch (Exception ex)
