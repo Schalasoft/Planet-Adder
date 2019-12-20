@@ -31,10 +31,10 @@ namespace PlanetAdder.FileHandling
 
         public static string GetDLLPath()
         {
-            string path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase);
-            path = path.Replace("file:/", ""); // May contain file ref key, so remove it if it exists
-            path = path.Replace("file:\\", "");
-            return path;
+            string codeBase = Assembly.GetExecutingAssembly().CodeBase;
+            UriBuilder uri = new UriBuilder(codeBase);
+            string path = Uri.UnescapeDataString(uri.Path);
+            return Path.GetDirectoryName(path);
         }
 
         // Converts text names of planets to their types
