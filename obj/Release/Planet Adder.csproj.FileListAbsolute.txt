@@ -9,3 +9,10 @@ C:\Steam Modding\Mods\Oxygen Not Included\PlanetAdder\bin\Release\Planet Adder.d
 C:\Steam Modding\Mods\Oxygen Not Included\PlanetAdder\bin\Release\Planet Adder.pdb
 C:\Steam Modding\Mods\Oxygen Not Included\PlanetAdder\bin\Release\EnableLogging.txt
 C:\Steam Modding\Mods\Oxygen Not Included\PlanetAdder\obj\Release\Planet Adder.csprojAssemblyReference.cache
+C:\Users\Cian\Documents\GitHub\Planet-Adder\obj\Release\Planet Adder.csproj.CoreCompileInputs.cache
+C:\Users\Cian\Documents\GitHub\Planet-Adder\obj\Release\Planet Adder.dll
+C:\Users\Cian\Documents\GitHub\Planet-Adder\obj\Release\Planet Adder.pdb
+C:\Users\Cian\Documents\GitHub\Planet-Adder\bin\Release\config.txt
+C:\Users\Cian\Documents\GitHub\Planet-Adder\bin\Release\EnableLogging.txt
+C:\Users\Cian\Documents\GitHub\Planet-Adder\bin\Release\Planet Adder.dll
+C:\Users\Cian\Documents\GitHub\Planet-Adder\bin\Release\Planet Adder.pdb
