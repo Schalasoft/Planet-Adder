@@ -16,3 +16,6 @@ C:\Users\Cian\Documents\GitHub\Planet-Adder\bin\Release\config.txt
 C:\Users\Cian\Documents\GitHub\Planet-Adder\bin\Release\EnableLogging.txt
 C:\Users\Cian\Documents\GitHub\Planet-Adder\bin\Release\Planet Adder.dll
 C:\Users\Cian\Documents\GitHub\Planet-Adder\bin\Release\Planet Adder.pdb
+C:\Users\Cian\Documents\GitHub\Planet-Adder\bin\Release\Properties\mod.yaml
+C:\Users\Cian\Documents\GitHub\Planet-Adder\bin\Release\Properties\mod_info.yaml
+C:\Users\Cian\Documents\GitHub\Planet-Adder\obj\Release\Planet Adder.csprojAssemblyReference.cache
