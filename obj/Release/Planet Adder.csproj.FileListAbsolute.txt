@@ -24,3 +24,5 @@ C:\Users\Cian\Documents\GitHub\Planet-Adder\bin\Release\Assembly-CSharp.dll
 C:\Users\Cian\Documents\GitHub\Planet-Adder\bin\Release\UnityEngine.CoreModule.dll
 C:\Users\Cian\Documents\GitHub\Planet-Adder\bin\Release\UnityEngine.dll
 C:\Users\Cian\Documents\GitHub\Planet-Adder\obj\Release\Planet Adder.csproj.CopyComplete
+C:\Users\Cian\Documents\GitHub\Planet-Adder\obj\Release\Planet Adder.csprojAssemblyReference.cache
+C:\Users\Cian\Documents\GitHub\Planet-Adder\bin\Release\0Harmony.xml

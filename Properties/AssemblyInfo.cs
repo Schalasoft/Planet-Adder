@@ -1,5 +1,4 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("PlanetAdder")]
@@ -15,5 +14,5 @@ using System.Runtime.InteropServices;
 
 [assembly: Guid("d7d21b4a-1da7-41d8-b202-c58ca8fa62aa")]
 
-[assembly: AssemblyVersion("1.0.0.7")]
-[assembly: AssemblyFileVersion("1.0.0.7")]
+[assembly: AssemblyVersion("1.0.0.8")]
+[assembly: AssemblyFileVersion("1.0.0.8")]
