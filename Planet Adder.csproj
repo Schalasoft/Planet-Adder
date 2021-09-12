@@ -9,9 +9,8 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PlanetAdder</RootNamespace>
     <AssemblyName>Planet Adder</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -56,25 +55,25 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="0Harmony">
-      <HintPath>..\..\..\..\..\Steam Modding\Mods\Oxygen Not Included\InfinitePlanetResources - References\0Harmony.dll</HintPath>
+      <HintPath>..\..\..\Libraries\Harmony\Release\net35\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\..\Steam Modding\Mods\Oxygen Not Included\InfinitePlanetResources - References\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\InfinitePlanetResources - References\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>..\..\..\..\..\Steam Modding\Mods\Oxygen Not Included\InfinitePlanetResources - References\Assembly-CSharp-firstpass.dll</HintPath>
+      <HintPath>..\InfinitePlanetResources - References\Assembly-CSharp-firstpass.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="UnityEngine">
-      <HintPath>..\..\..\..\..\Steam Modding\Mods\Oxygen Not Included\InfinitePlanetResources - References\UnityEngine.dll</HintPath>
+      <HintPath>..\..\..\Libraries\RimWorld Core\UnityEngine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\..\..\Steam Modding\Mods\Oxygen Not Included\InfinitePlanetResources - References\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>..\..\..\Libraries\UnityEngine.CoreModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -97,14 +96,6 @@
     <Content Include="EnableLogging.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\mod.yaml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Properties\mod_info.yaml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
